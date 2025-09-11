@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Steps — React Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple, focused React UI to guide users through a 3‑step flow. The design features circular step indicators, a collapsible panel, and clear Previous/Next navigation. Built as part of a React learning series.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Step indicators: three numbered circles with active highlighting
+- Collapsible panel: toggle visibility with a close button (×)
+- Navigation: Previous/Next buttons with bounds checking
+- State management: `useState` for step and open/close state
+- Styles: minimal, accessible defaults in `src/index.css`
 
-### `npm start`
+## Quick Start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Prerequisites: Node.js 18+ and npm.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Install: `npm install`
+- Develop: `npm start` (opens at http://localhost:3000)
+- Test: `npm test`
+- Build: `npm run build` (outputs to `build/`)
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `src/App.js`: Main `Steps` component and app shell
+- `src/index.js`: App bootstrap and StrictMode
+- `src/index.css`: Styles for steps, buttons, and layout
+- `public/`: Static assets and HTML template
 
-### `npm run build`
+## Design Notes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Visual style: neutral container (`#f7f7f7`) with accent color `#7950f2`
+- Step UI: three equal circles; active step in white-on-accent
+- Layout: numbers at top, message centered, actions spaced left/right
+- Toggle: close button in the top-right to collapse/expand the panel
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Customization
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Steps/messages: edit the `messages` array in `src/App.js`
+- Colors/spacing: adjust tokens in `src/index.css`
+- Behavior: update `handlePrevious`/`handleNext` and step bounds
 
-### `npm run eject`
+## Accessibility
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Keyboard: buttons are reachable via Tab; focus styles rely on browser defaults
+- Labels: buttons use clear text; consider adding `aria-label` for the close button
+- Future: announce step changes via `aria-live` region if needed
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `npm start`: Run a local dev server with fast refresh
+- `npm test`: Run tests in watch mode (if/when added)
+- `npm run build`: Create an optimized production build in `build/`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Notes
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was scaffolded with Create React App and then adapted to the new Steps design for clarity and focused practice.
